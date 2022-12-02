@@ -7,14 +7,14 @@ export default function Home() {
   let esp = router.locale == 'en-US' ? "Spanish" : 'es' ? "Español" : ";"
   let eng = router.locale == 'en-US' ? "English" : 'es' ? "Inglés" : ";"
   let Administracion = router.locale == 'en-US' ? "Product Management" : 'es' ? "Administración de Productos" : ";"
-  let empleado = router.locale == 'en-US' ? "Employees" : 'es' ? "Empleados" : ";"
+  let Administracion_e = router.locale == 'en-US' ? "Employee Administration" : 'es' ? "Administración de Empleados" : ";"
+  let producto = router.locale == 'en-US' ? "Products" : 'es' ? "Productos" : ";"
   let agregar = router.locale == 'en-US' ? "Add product" : 'es' ? "Añadir Producto" : ";"
   let nombre = router.locale == 'en-US' ? "Name" : 'es' ? "Nombre" : ";"
-  let categoria = router.locale == 'en-US' ? "Category" : 'es' ? "Categoria" : ";"
-  let marca = router.locale == 'en-US' ? "Brand" : 'es' ? "Marca" : ";"
-  let talla = router.locale == 'en-US' ? "Size" : 'es' ? "Talla" : ";"
-  let color = router.locale == 'en-US' ? "Color" : 'es' ? "Color" : ";"
-  let precio = router.locale == 'en-US' ? "Price" : 'es' ? "Precio" : ";"
+  let cargo = router.locale == 'en-US' ? "Position" : 'es' ? "Cargo" : ";"
+  let apellido = router.locale == 'en-US' ? "Last Name" : 'es' ? " Apellidos" : ";"
+  let celular = router.locale == 'en-US' ? "Cell Phone" : 'es' ? "Celular" : ";"
+  let correo = router.locale == 'en-US' ? "Email" : 'es' ? "Correo" : ";"
   let editar = router.locale == 'en-US' ? "Edit" : 'es' ? "Editar" : ";"
   let eliminar = router.locale == 'en-US' ? "Delete" : 'es' ? "Eliminar" : ";"
   let uds = router.locale == 'en-US' ? "Units" : 'es' ? "Uds." : ";"
@@ -36,13 +36,13 @@ export default function Home() {
           <div className="d-flex">
             <div className="dropdown">
               <button className="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                <a href="/es">{esp}</a> 
+                <a href="/es/empleados">{esp}</a> 
               </button>
               <button  className="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                <a href="/en-us">{eng}</a> 
+                <a href="/en-us/empleados">{eng}</a> 
               </button>
               <button  className="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                <a href="/empleados">{empleado}</a> 
+                <a href="/">{producto}</a> 
               </button>
               <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <li><a className="dropdown-item" href="#">Cerrar Sesión</a></li>
@@ -55,7 +55,7 @@ export default function Home() {
       <main>
         <div className="card text-center m-4">
           <div className="card-header bg-dark">
-            {Administracion}
+            {Administracion_e}
           </div>
           <div className="card-body">
             <div className="text-end">
@@ -65,28 +65,24 @@ export default function Home() {
             <table className="table">
               <thead className="table-dark">
                 <tr>
-                  <td>id</td>
+                  <td>DNI</td>
                   <td>{nombre}</td>
-                  <td>{categoria}</td>
-                  <td>{marca}</td>
-                  <td>{color}</td>
-                  <td>{talla}</td>
-                  <td>{precio}</td>
-                  <td>stock</td>
+                  <td>{apellido}</td>
+                  <td>{cargo}</td>
+                  <td>{celular}</td>
+                  <td>{correo}</td>
                   <td>{editar}</td>
                   <td>{eliminar}</td>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>1</td>
-                  <td>Poleron con capucha</td>
-                  <td>casacas</td>
-                  <td>adidas</td>
-                  <td>rojo y balnco</td>
-                  <td>M</td>
-                  <td>S/. 169.99</td>
-                  <td>120 {uds}</td>
+                  <td>72806558</td>
+                  <td>Raúl</td>
+                  <td>Díaz Cabrera</td>
+                  <td>Programador</td>
+                  <td>929481293</td>
+                  <td>72806558@certus.edu.pe</td>
                   <td><button className="btn btn-primary"><i className="fa-solid fa-pen-to-square"></i> {editar}</button></td>
                   <td><button className="btn btn-danger"><i className="fa-solid fa-trash-can"></i> {eliminar}</button></td>
                 </tr>
